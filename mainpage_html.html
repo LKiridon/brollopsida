@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Min Enkla Dynamiska Hemsida</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-desktop.css" media="(min-width: 769px)" />
+    <link rel="stylesheet" href="styles-mobile.css" media="(max-width: 768px)" />
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header class="banner">
+        <h1 class="logo"><span>Sofia &amp; Viktors</span><br /><span>Bröllop</span></h1>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Öppna meny">☰</button>
+        <nav class="side-nav" aria-label="Huvudnavigering">
+            <ul>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="hero-carousel">
+            <div class="carousel-container">
+                <img class="hero-image carousel-slide active" src="brudparet/1.jpg" alt="Brudparet" />
+                <img class="hero-image carousel-slide" src="brudparet/2.jpg" alt="Brudparet" />
+                <img class="hero-image carousel-slide" src="brudparet/3.jpg" alt="Brudparet" />
+            </div>
+            <div class="hero-overlay">    
+                <section class="Info">
+            <div class="card">
+                <h2>Vi gifter oss!</h2>
+                <p class="information">Denna sida kommer användas för att kommunicera ut till er gällande vårt stundande bröllop, 
+                men även användas för att samla in inforamation från er gällande OSA, eventuella specialbehov etc. </p><p>
+                Vi återkommer när dessa funktioner är på plats.</p>
+            </div>
+        </section>
+        </section>
+            <section class="save-date">
+            <div class="card">
+                <h2>Save The Date</h2>
+                <p class="date">Tid: <strong>27/6 2026</strong></p>
+                <p class="place">Plats: <strong>i Hagby, söder om Kalmar</strong></p>
+            </div>
+        </section>
+
+        <section id="osa" class="rsvp">
+            <div class="card">
+                <h2>OSA / Anmälan</h2>
+                <p>Fyll i kontaktperson (obligatoriskt) och lägg till gäster nedan.</p>
+
+                <form id="rsvp-form" action="#" novalidate>
+                    <div class="form-row">
+                        <label for="contactName">Kontaktperson (namn) *</label>
+                        <input id="contactName" name="contactName" type="text" required />
+                    </div>
+
+                    <div class="form-row">
+                        <label for="contactEmail">E-post (kontakt) *</label>
+                        <input id="contactEmail" name="contactEmail" type="email" required />
+                    </div>
+
+                    <div class="form-row">
+                        <label for="contactPhone">Telefon</label>
+                        <input id="contactPhone" name="contactPhone" type="tel" />
+                    </div>
+
+                    <fieldset class="people-fieldset">
+                        <legend>Gäster</legend>
+                        <div id="person-list" class="person-list">
+                            <!-- dynamic rows will be added here -->
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" id="add-person" class="btn-secondary">Lägg till person</button>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Skicka OSA</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
